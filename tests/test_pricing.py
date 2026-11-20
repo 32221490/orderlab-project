@@ -21,13 +21,13 @@ def test_discount_over_100():
         final_total(10_00, 2, 101)
 
 @pytest.mark.parametrize(
-    "price, quty, discount, expected",
+    "price, qty, discount, expected",
     [
         (10_000, 2, 0, 23_000),
         (49_999, 1, 0, 52_999),
         (50_000, 1, 0, 50_000),
         (10_000, 2, 10, 21_000),
-        (50_001, 1, 0, 50_000),
+        (50_001, 1, 0, 50_001),
         (100_000, 1, 50, 50_000),
         (0, 3, 0, 0),
     ],
